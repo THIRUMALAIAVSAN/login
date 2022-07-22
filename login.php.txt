@@ -1,0 +1,47 @@
+<?php
+
+@include 'config.php';
+
+session_start();
+
+if(!isset($_SESSION['ADMIN_PAGE'])){
+   header('location:LOGIN_FORM.PHP');
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ADMINISTRATION PAGE</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <script type="javascript.js"></script>
+
+</head>
+<body>
+   
+<div class="container">
+
+   <div class="content">
+      <h3>hi, <span>admin</span></h3>
+      <h1>WONDERFUL,JOY <span><?php echo $_SESSION['admin_name'] ?></span></h1>
+      <p>THIS IS AN ADMINISTRATION PAGE</p>
+      <a href="login_form.php" class="btn">LOGIN</a>
+      <a href="register_form.php" class="btn">Register</a>
+      <a href="logout.php" class="btn">LOGOUT</a>
+   </div>
+
+</div>
+<script>
+var a=1;
+for(var i=a;i<5;i++){
+console.log(i);
+}
+</body>
+
+</html>

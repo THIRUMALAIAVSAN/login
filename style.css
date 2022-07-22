@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'arial';
+   margin:20px; 
+   padding:10px;
+   box-sizing: border-box;
+   color: none;
+}
+
+.container{
+   min-height: 97vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:15px;
+   padding-bottom: 65px;
+   padding-top: none;
+   padding-left: none;
+   padding-right: none;
+   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(login.jpg);
+    background-size: cover;
+}
+
+.container .content{
+   text-align: center;
+   padding: none;
+   color: none;
+   text-decoration: none;
+   margin: none;
+}
+
+.container .content h3{
+   font-size: 25px;
+   color:orange;
+   padding: none;
+   margin: none;
+   line-height: none;
+}
+
+.container .content h3 span{
+   background: crimson;
+   color:red;
+   border-radius: 5px;
+   padding:0 15px;
+   font-family: none;
+   font-weight: none;
+   font-style: none;
+}
+
+.container .content h1{
+   font-size: 50px;
+   color:yellow;
+   font-family: none;
+   font-weight: none;
+   font-style: none;
+   line-width: none;
+}
+
+.container .content h1 span{
+   color:crimson;
+   font-size: none;
+   font-family: none;
+   font-weight: none;
+   font-style: none;
+   line-width: none;
+}
+
+.container .content p{
+   font-size: 20px;
+   margin-bottom: 20px;
+   font-family: 10px;
+   font-style:none;
+   font-family: none;
+   font-weight: none;
+   font-style: none;
+   line-width: none;
+}
+
+.container .content .btn{
+   display: inline-block;
+   padding:5px 15px;
+   font-size: 20px;
+   background: green;
+   color:pink;
+   margin:0 5px;
+   padding: none;
+   text-transform: none;
+}
+
+.container .content .btn:hover{
+   background: crimson;
+   font-family: none;
+   font-weight: none;
+   font-style: none;
+   line-width: none;
+   padding: none;
+}
+
+.form-container{
+   min-height: 90vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:10px;
+   padding-bottom: 62px;
+   background: violet;
+}
+
+.form-container form{
+   padding:10px;
+   border-radius: 15px;
+   box-shadow: 0 10px 100px;
+   background: sandle;
+   font-family: none;
+   font-weight: none;
+   text-align: center;
+   font-style: none;
+   line-width: none;
+   width: 250px;
+}
+
+.form-container form h3{
+   font-size: 15px;
+   text-transform: uppercase;
+   margin-bottom: 5px;
+   font-style: none;
+   color:blue;
+   font-family: none;
+   font-weight: none;
+}
+
+.form-container form input,
+.form-container form select{
+   width: 55%;
+   padding:5px 10px;
+   font-size: 15px;
+   margin:10px 0;
+   background: magenta;
+   border-radius: 10px;
+}
+
+.form-container form select option{
+   background: cyan;
+   text-decoration: none;
+}
+
+.form-container form .form-btn{
+   background: pink;
+   color:crimson;
+   text-transform: capitalize;
+   font-size: 10px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: crimson;
+   font-family: none;
+   font-weight: none;
+   color:grey;
+   font-style: none;
+   line-width: none;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   font-family: none;
+   font-weight: none;
+   font-style: none;
+   line-width: none;
+   color:red;
+}
+
+.form-container form p a{
+   color:crimson;
+}
+
+.form-container form .error-msg{
+   margin:15px 0;
+   display: block;
+   background: crimson;
+   color:blue;
+   border-radius: 10px;
+   font-size: 15px;
+   padding:7px;
+}

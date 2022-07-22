@@ -1,0 +1,83 @@
+<?php
+
+@include 'config.php';
+
+if(isset($_POST['SUBMIT'])){
+
+   $name = mysqli_real_escape_string($conn, $_POST['NAME']);
+   $email = mysqli_real_escape_string($conn, $_POST['E-mail']);
+   $pass = md5($_POST['PASSWORD']);
+   $cpass = md5($_POST['CPASSWORD']);
+   $user_type = $_POST['USER_TYPE'];
+
+   $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $error[] = 'USER ALREADY EXIT!';
+
+   }else{
+
+      if($pass != $cpass){
+         $error[] = 'PASSWORD NOT MATCHED!';
+      }else{
+         $insert = "INSERT INTO user_form(name, email, password, user_type) VALUES('$name','$email','$pass','$user_type')";
+         mysqli_query($conn, $insert);
+         header('location:login.php');
+      }
+   }
+
+};
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>REGISTER FORM</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <script type="javascript.js"></script>
+
+</head>
+<body>
+
+   <div class="form-container">
+
+   <form action="" method="post">
+      <h3>register now</h3>
+      <?php
+      if(isset($error)){
+         foreach($error as $error){
+            echo '<span class="error-msg">'.$error.'</span>';
+         };
+      };
+      ?>
+      <input type="TEXT" name="name" required placeholder="ENTER YOUR NAME">
+      <input type="E-MAIL" name="email" required placeholder="ENTER YOUR MAIL-ID">
+      <input type="PASSWORD" name="PASSWORD" required placeholder="ENTER YOUR PASSWORD">
+      <input type="CONFORM_PASSWORD" name="cpassword" required placeholder="CONFORMATION OF THE PASSWORD">
+      <select name="user_type">
+         <option value="user">USER</option>
+         <option value="login">LOGIN</option>
+      </select>
+      <input type="submit" name="submit" value="register now" class="form-btn">
+      <p>already have an account? <a href="login_form.php">login now</a></p>
+   </form>
+
+</div>
+<script>
+var a=0;
+for(var i=a;i<5;i++){
+console.log(i);
+}
+</script>
+</body>
+</html>
